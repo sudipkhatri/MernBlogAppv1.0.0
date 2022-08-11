@@ -1,4 +1,5 @@
 import express from  "express";
+import {} from 'dotenv/config'
 import mongoose from "mongoose";
 import router from "./Routes/userRoutes";
 import blogsRouter from "./Routes/blogRoutes";
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/blog", blogsRouter);
 
-const uri =`mongodb+srv://${name}:${pass}@${dbname}.mrjpenl.mongodb.net/?retryWrites=true&w=majority`;
+const uri =`mongodb+srv://${process.env.name}:${process.env.pass}@${process.env.dbname}.mrjpenl.mongodb.net/?retryWrites=true&w=majority`;
 const options = {
   autoIndex: false, // Don't build indexes
   maxPoolSize: 10, // Maintain up to 10 socket connections
