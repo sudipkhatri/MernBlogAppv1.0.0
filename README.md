@@ -4,4 +4,4 @@ Frontend is build using React, Redux, Material UI, Axios Api
 Backend is build using express, mongoose, cors, dotenv
 CRUD operation 
 Rest architect practises
-authenticatio using bycrypt
+authentication using bycrypt
