@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/blog", blogsRouter);
 
-const uri =`mongodb+srv://${name}:${pass}@blogappv1.mrjpenl.mongodb.net/?retryWrites=true&w=majority`;
+const uri =`mongodb+srv://${name}:${pass}@${dbname}.mrjpenl.mongodb.net/?retryWrites=true&w=majority`;
 const options = {
   autoIndex: false, // Don't build indexes
   maxPoolSize: 10, // Maintain up to 10 socket connections
